@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Data</title>
+</head>
+
+<body>
+	<center>
+		<a href="{{ url_for('index') }}"><< Batal & Kembali</a>
+		<br /><br />
+
+		<form name="form1" method="post" action="{{ url_for('edit', id=crud[0]) }}" enctype="multipart/form-crud">
+			<table border="0">
+				<tr>
+					<td>Nama</td>
+					<td><input type="text" name="nama" value="{{ crud[1] }}"></td>
+				</tr>
+				<tr>
+					<td>Umur</td>
+					<td><input type="text" name="umur" value="{{ crud[2] }}"></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="text" name="email" value="{{ crud[3] }}"></td>
+				</tr>
+				<tr>
+					<td><input type="hidden" name="id" value="{{ crud[0] }}"></td>
+					<td><input type="submit" name="update" value="Update"></td>
+				</tr>
+			</table>
+		</form>
+	</center>
+</body>
+</html>
