@@ -39,7 +39,7 @@ pip install -r requirements.txt
 python3 ./app.py
 ```
 
-7. Access via a browser on localhost / http://127.0.0.1
+7. Access via a browser on localhost:5000 / http://127.0.0.1:5000
 
 
 ## This CRUD has 2 Versions
