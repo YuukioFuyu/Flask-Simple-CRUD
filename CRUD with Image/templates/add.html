@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tambah Data</title>
+</head>
+
+<body>
+	<center>
+		<a href="{{ url_for('index') }}"><< Batal & Kembali</a>
+		<br/><br/>
+
+		<form action="{{ url_for('add') }}" method="post" name="form1" enctype="multipart/form-data">
+			<table width="25%" border="0">
+				<tr>
+					<td>Nama</td>
+					<td><input type="text" name="nama"></td>
+				</tr>
+				<tr>
+					<td>Umur</td>
+					<td><input type="text" name="umur"></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="text" name="email"></td>
+				</tr>
+				<tr>
+                    <td>Gambar</td>
+                    <td><input type="file" name="gambar" accept="image/*"></td>
+                </tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" name="Submit" value="Tambah" /></td>
+				</tr>
+			</table>
+		</form>
+	</center>
+</body>
+</html>
