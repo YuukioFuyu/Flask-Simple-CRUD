@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CRUD 1</title>
+</head>
+
+<body>
+	<a href="{{ url_for('add') }}">Tambah Data Baru</a><br/><br/>
+
+	<table width='80%' border=0>
+
+		<tr bgcolor='#CCCCCC'>
+            <td>Foto Profil</td>
+			<td>Nama</td>
+			<td>Umur</td>
+			<td>Email</td>
+			<td>Action</td>
+		</tr>
+		{% for item in crud %}
+		<tr>
+            <td>
+                {% if item[4] %}
+                    <img src="data:image/jpeg;base64,{{ item[4] }}" alt="Gambar" width="80">
+                {% endif %}
+            </td>
+			<td>{{ item[1] }}</td>
+			<td>{{ item[2] }}</td>
+			<td>{{ item[3] }}</td>
+			<td>
+				<a href="{{ url_for('edit', id=item[0]) }}">Edit</a>
+				<a href="{{ url_for('delete', id=item[0]) }}" onClick="return confirm('Serius mau dihapus?')">Hapus</a>
+			</td>
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>
