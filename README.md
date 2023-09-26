@@ -7,7 +7,7 @@ Development of Repository [PHP-Simple-CRUD](https://github.com/YuukioFuyu/PHP-Si
 1. Clone this repository
 
 ```bash
-git clone https://github.com/YuukioFuyu/campUS.git
+git clone https://github.com/YuukioFuyu/Flask-Simple-CRUD.git
 ```
 
 2. Install python3 & venv
